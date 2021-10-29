@@ -1,7 +1,30 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .App {
   text-align: center;
 }
+.font{
+  font-family: 'Courgette', cursive;
+}
+.font2{
+  font-family: 'Kaushan Script', cursive;
+}
+.color1{
+  color: #D82460;
+}
+.color11{
+  background-color:  #D82460;
+  border: none;
+}
 
+.color2{
+    color: #2ACB35;
+}
+.color22{
+    background-color: #2ACB35;
+    border: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

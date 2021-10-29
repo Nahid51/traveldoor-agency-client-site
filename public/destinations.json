@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "AFRICA",
+        "about": "The Statue of Liberty, one of New York’s most popular tourist attractions, has captivated travelers from every corner of the world for over one hundred years. One of the most recognizable and well-known women in the world, the Statue of Liberty has a resume that would make any movie star jealous!",
+        "img": "https://i.ibb.co/gF9BwTm/h1-img4.jpg"
+    },
+    {
+        "id": 2,
+        "name": "AMERICA",
+        "about": "Thailand is not just famous for its tropical beaches. The country is also famed for its amazing rural locations that cater extremely well for tourists despite seemingly being in the middle of nowhere. Whether you are looking for somewhere quiet to stay or a rural adventure, you can easily find accommodation and tours.",
+        "img": "https://i.ibb.co/B68jQhb/h1-destinations5.jpg"
+    },
+    {
+        "id": 3,
+        "name": "CANMODIA",
+        "about": "Paris has many stunning sights that showcase impressive architecture and design, and these places have become world-famous for their beauty. The ample photo opportunities are some of the most popular reasons to visit Paris for travelers, writers, artists and bloggers.",
+        "img": "https://i.ibb.co/X7Rq3Qy/h1-destinations4.jpg"
+    },
+    {
+        "id": 4,
+        "name": "COSTATICA",
+        "about": "Prague is famous for well-preserved castles, Baroque and Gothic cathedrals, medieval squares, dreamy bridges, nightlife spots, and a lively arts scene. It's known for its centuries of history and cultural heritage, where the medieval heart of Europe can be felt in its cobblestone streets.",
+        "img": "https://i.ibb.co/7Stz5g0/h1-destinations3.jpg"
+    },
+    {
+        "id": 5,
+        "name": "MALDIVES",
+        "about": "The Maldives, a collection of more than a thousand islands in the Indian Ocean, is known for its clear emerald waters, beautiful beaches that stretch as far as the eye can see, and of course, luxurious overwater bungalows.",
+        "img": "https://i.ibb.co/qpSKWLc/d10-1.jpg"
+    }
+]

@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Cano Cristales River Trip",
+        "price": "250",
+        "time": "4 days",
+        "minAge": "7+",
+        "maxPeople": "50",
+        "location": "Bryce Canyon National Park, USA",
+        "highlights": "5-day Prince Edward Island trip from Halifax. Take a guided walking tour of Charlottetown, the islands capital city. Explore scenic Prince Edward Island National Park. Overnight accommodation and all transport included. Visit famous Green Gables Heritage Site, which inspired the classic book, Anne of Green Gables",
+        "img": "https://i.ibb.co/YT7N8bP/l1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Waterfalls, Geysers and Glacier",
+        "price": "350",
+        "time": "7 days",
+        "minAge": "5+",
+        "maxPeople": "60",
+        "location": "Discover Prince Edward Island, Canada",
+        "highlights": "5-day Prince Edward Island trip from Halifax. Take a guided walking tour of Charlottetown, the islands capital city. Explore scenic Prince Edward Island National Park. Overnight accommodation and all transport included. Visit famous Green Gables Heritage Site, which inspired the classic book, Anne of Green Gables",
+        "img": "https://i.ibb.co/TKm6Q0q/l2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Mount Kilimanjaro, Machame Route",
+        "price": "300",
+        "time": "9 days",
+        "minAge": "18+",
+        "maxPeople": "20",
+        "location": "Bryce Canyon National Park, USA",
+        "highlights": "Approaching legendary Kilimanjaro from the south-west, we take the popular Machame Route, with a total trip time of nine days, thus giving us even more acclimatization time and an even better chance of reaching the summit. Lush rainforest and Alpine moorland characterize the Machame Route, a trek which is challenging, make no mistake, despite the extra time given to acclimatize.",
+        "img": "https://i.ibb.co/NF111Xc/l3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Discovery Islands Kayaking Tour",
+        "price": "280",
+        "time": "6 days",
+        "minAge": "12+",
+        "maxPeople": "40",
+        "location": "Bryce Canyon National Park, USA",
+        "highlights": "5-day Prince Edward Island trip from Halifax. Take a guided walking tour of Charlottetown, the islands capital city. Explore scenic Prince Edward Island National Park. Overnight accommodation and all transport included. Visit famous Green Gables Heritage Site, which inspired the classic book, Anne of Green Gables",
+        "img": "https://i.ibb.co/GsG5S0L/l4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Essence of Vietnam South to North",
+        "price": "320",
+        "time": "7 days",
+        "minAge": "15+",
+        "maxPeople": "50",
+        "location": "City Tours and Museum Tours, Vietnam",
+        "highlights": "Discover Vietnam’s delightful melange of culture and history on a compact, insightful journey. Explore Ho Chi Minh City’s historic monuments then glide across the waters of the Mekong Delta. After a stop in sleepy Hoi An, travel to bustling Hanoi and cap off the adventure with a Halong Bay cruise.",
+        "img": "https://i.ibb.co/WBDJsb9/l5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Tour of Mont Blanc 8 days – Self Guided",
+        "price": "250",
+        "time": "8 days",
+        "minAge": "10+",
+        "maxPeople": "30",
+        "location": "Beaches and Historical Place, Switzerland",
+        "highlights": "Hiking the Mt. Blanc Range allows for you to be as close as possible to this legendary alpine giant without actually climbing it. Every day, you will enjoy so many new adventures as you explore the different sides, cultures, and landscapes of the range: first through France, and then Italy and finally Switzerland. This is hands down one of the world’s best and most classic multi-day mountain hikes!",
+        "img": "https://i.ibb.co/FKb5Svr/l6.jpg"
+    }
+]

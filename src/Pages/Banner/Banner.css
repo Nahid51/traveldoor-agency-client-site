@@ -1,0 +1,50 @@
+.banner h2{
+    font-family: 'Kaushan Script', cursive;
+    color:yellow;
+    font-size: 3rem;
+}
+.banner h1{
+    font-weight: bold;
+    font-size: 5rem;
+}
+.banner img{
+    filter:brightness(80%);
+}
+.banner h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .banner h2{
+        font-size: 25px;
+    }
+    .banner h1{
+        font-size: 20px;
+    }
+}
+
+ @media only screen and (min-width: 481px) and (max-width: 768px){
+    .banner h2{
+        font-size: 55px;
+    }
+    .banner h1{
+        font-size: 50px;
+    }
+ }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .banner h2{
+        font-size: 75px;
+    }
+    .banner h1{
+        font-size: 60px;
+    }
+}
+@media only screen and (min-width: 1025px){
+    .banner h2{
+        font-size: 100px;
+    }
+    .banner h1{
+        font-size: 80px;
+    }
+}
