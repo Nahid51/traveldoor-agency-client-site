@@ -1,12 +1,24 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 
 const OrderReview = () => {
     const { orderId } = useParams();
     const [locationDetails, setLocationDetails] = useState([]);
     const [singleLocation, setSingleLocation] = useState([]);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [contact, setContact] = useState("")
+    const [address, setAddress] = useState("");
+    const [count, setCount] = useState("");
+
+    const price = count * singleLocation?.price;
+    const totalPrice = parseInt(price);
+
+    const location = singleLocation?.name;
+    const tripPrice = singleLocation?.price;
+    console.log(location, tripPrice);
 
     // data loaded
     useEffect(() => {
@@ -17,14 +29,72 @@ const OrderReview = () => {
 
     // data loaded after calling and set depandency
     useEffect(() => {
-        const foundBlog = locationDetails.find(location => location.id == orderId);
-        setSingleLocation(foundBlog);
+        const foundLocation = locationDetails.find(location => location.id == orderId);
+        setSingleLocation(foundLocation);
     }, [locationDetails, orderId]);
 
+    const getUserName = e => {
+        setName(e.target.value);
+    }
+    const getUserEmail = e => {
+        setEmail(e.target.value);
+    }
+    const getUserContactNumber = e => {
+        setContact(e.target.value);
+    }
+    const getUserAddress = e => {
+        setAddress(e.target.value);
+    }
+    const getTotalPeople = e => {
+        setCount(e.target.value);
+    }
+    const handlePrice = e => {
+        e.preventDefault();
+    }
+
+    const handleError = () => {
+        alert('Pleade fill the gap first');
+    }
+
+    const handleAddUser = e => {
+
+        const data = { name, email, contact, address, count, totalPrice, location };
+
+        fetch('http://localhost:5000/addUser', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.acknowledged === true) {
+                    alert('Added successfully')
+                    setName("");
+                    setEmail("");
+                    setAddress("");
+                    setContact("");
+                    setCount("");
+                }
+                console.log(result);
+            })
+        e.preventDefault()
+        // axios.post('http://localhost:5000/addUser', data)
+        //     .then(res => {
+        //         if (res === true) {
+        //             alert('Added Successfully');
+        //         }
+        //         setName("");
+        //         setEmail("");
+        //         setAddress("");
+        //         setContact("");
+        //         setCount("");
+        //     })
+        // e.preventDefault();
+    }
     return (
         <div className="container">
             <div className="row">
-                <div className="col-8">
+                <div className="col-12 col-lg-8">
                     <div className='my-5'>
                         <Card className='mx-auto'>
                             <Card.Img className="animate__animated animate__backInLeft" variant="top" src={singleLocation?.img} />
@@ -43,50 +113,69 @@ const OrderReview = () => {
                         </Card>
                     </div>
                 </div>
-                <div className="col-4 mt-5">
+                <div className="col-12 col-lg-4 mt-5">
                     <h2 className="font2 color2" >Love this tour?</h2>
                     <h1 className="fw-bold mb-3">Book Now</h1>
                     <Card>
-                        <Form className="p-2">
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridEmail">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email" required />
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" required />
-                                </Form.Group>
-                            </Row>
-
-                            <Form.Group className="mb-3" controlId="formGridAddress1">
-                                <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Enter Your Address" required />
+                        <Form>
+                            <Form.Group as={Col} className="my-3" controlId="formHorizontalName">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Text type="text" placeholder="Name" required >{`Booking for: ${singleLocation?.name}`}</Form.Text>
+                                </Col>
                             </Form.Group>
 
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridCity">
-                                    <Form.Label>City</Form.Label>
-                                    <Form.Control placeholder="City Name" required />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>State</Form.Label>
-                                    <Form.Control placeholder="State Name" />
-                                </Form.Group>
-                            </Row>
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridPeople">
-                                    <Form.Label>People</Form.Label>
-                                    <Form.Control placeholder="Number of People" required />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="formGridPrice">
-                                    <Form.Label>Total Price</Form.Label>
-                                    <Form.Control placeholder="Total Price" />
-                                </Form.Group>
-                            </Row>
+                            <Form.Group as={Col} className="my-3" controlId="formHorizontalName">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Control onBlur={getUserName} type="text" placeholder="Name" required />
+                                </Col>
+                            </Form.Group>
 
-                            <Button as={Link} to="/orderComplete" variant="primary" type="submit">Book Now</Button>
+                            <Form.Group as={Col} className="my-3" controlId="formHorizontalEmail">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Control onBlur={getUserEmail} type="email" placeholder="Email" required />
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Col} className="my-3" controlId="formHorizontalContact">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Control onBlur={getUserContactNumber} type="number" placeholder="Contact Number" required />
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Col} className="my-3" controlId="formHorizontalAddress">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Control onBlur={getUserAddress} type="text" placeholder="Address" required />
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Col} className="mb-3" controlId="formHorizontalCount">
+                                <Col className="mx-auto" sm={10}>
+                                    <Form.Control onBlur={getTotalPeople} type="number" placeholder="Number of People" required />
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Row} className="mb-3">
+                                <Col sm={6}>
+                                    <Button onClick={handlePrice} className="color11" type="submit">Price</Button>
+                                </Col>
+                                <Col sm={4}>
+                                    <Form.Text required>ToTal Price: &#36;{totalPrice}</Form.Text>
+                                </Col>
+                                {/* <Form.Text required>Booking for: {location}</Form.Text> */}
+                            </Form.Group>
+
+                            <Form.Group as={Col} className="mb-3" controlId="formHorizontalPrice">
+
+                            </Form.Group>
+
+                            <Form.Group as={Col} className="mb-3">
+                                <Col sm={{ span: 10, offset: 2 }}>
+                                    {name && address && count ?
+                                        <Button onClick={handleAddUser} className="color22" type="submit">Booked</Button> :
+                                        <Button onClick={handleError} className="color22">Booked</Button>
+                                    }
+                                </Col>
+                            </Form.Group>
                         </Form>
                     </Card>
                 </div>

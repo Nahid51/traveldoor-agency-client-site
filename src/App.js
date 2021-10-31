@@ -13,6 +13,11 @@ import OrderComplete from './Pages/OrderComplete/OrderComplete';
 import AuthProvider from './Context/AuthProvider';
 import Login from './Pages/Login/Login';
 import PrivateRoute from './Redirect/PrivateRoute';
+import AllUsers from './Pages/AllUsers/AllUsers';
+import Cart from './Pages/Cart/Cart';
+import SingleUser from './Pages/SingleUser.js/SingleUser';
+import Locations from './Pages/Locations/Locations';
+import Places from './Pages/Places/Places'
 
 function App() {
   return (
@@ -27,6 +32,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <Route path="/locations">
+              <Locations></Locations>
+            </Route>
+            <Route path="/destinations">
+              <Places></Places>
+            </Route>
             <PrivateRoute path="/orderReview/:orderId">
               <OrderReview></OrderReview>
             </PrivateRoute>
@@ -35,6 +46,15 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route exact path="/cart">
+              <Cart></Cart>
+            </Route>
+            <Route path="/allUsers">
+              <AllUsers></AllUsers>
+            </Route>
+            <Route path="/singleUser/:id">
+              <SingleUser></SingleUser>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
