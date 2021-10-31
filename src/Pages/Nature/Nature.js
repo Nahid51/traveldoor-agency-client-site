@@ -14,8 +14,8 @@ const Nature = () => {
                     <Card.Text style={{ fontWeight: "300" }} className=" font4">
                         We declare a special offer last year and we got a big response from that. <br /> Because of that, we give another special offer this year. This special offer for every couple.
                     </Card.Text>
-                    <Button as={Link} to="/booking" className="btn mx-auto color11">Booking Now</Button>
                     <Card.Text className="font4">Meet us and Book this special offer.</Card.Text>
+                    <Button as={Link} to="/booking" className="btn mx-auto color11">Booking Now</Button>
                 </Card.ImgOverlay>
             </Card>
         </div>
