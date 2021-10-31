@@ -22,7 +22,7 @@ const OrderReview = () => {
 
     // data loaded
     useEffect(() => {
-        fetch("http://localhost:5000/locations")
+        fetch("https://shielded-anchorage-74382.herokuapp.com/locations")
             .then(res => res.json())
             .then(data => setLocationDetails(data))
     }, []);
@@ -53,14 +53,13 @@ const OrderReview = () => {
     }
 
     const handleError = () => {
-        alert('Pleade fill the gap first');
+        alert('Please fill the gap first');
     }
 
     const handleAddUser = e => {
-
         const data = { name, email, contact, address, count, totalPrice, location };
 
-        fetch('http://localhost:5000/addUser', {
+        fetch('https://shielded-anchorage-74382.herokuapp.com/addUser', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -77,19 +76,7 @@ const OrderReview = () => {
                 }
                 console.log(result);
             })
-        e.preventDefault()
-        // axios.post('http://localhost:5000/addUser', data)
-        //     .then(res => {
-        //         if (res === true) {
-        //             alert('Added Successfully');
-        //         }
-        //         setName("");
-        //         setEmail("");
-        //         setAddress("");
-        //         setContact("");
-        //         setCount("");
-        //     })
-        // e.preventDefault();
+        e.preventDefault();
     }
     return (
         <div className="container">

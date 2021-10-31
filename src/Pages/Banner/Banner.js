@@ -17,8 +17,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h2>Travel the World</h2>
                         <h1>ENJOY YOUR IDEAL JOURNEY</h1>
-                        <Button as={Link} to="/about" className="btn color11">Know More</Button>{' '}
-                        <Button as={Link} to="/contact" className="btn color22">Contact Us</Button>{' '}
+                        <Button as={Link} to="/contact" className="btn color11">Contact Us</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -30,8 +29,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h2>Travel The Worlds</h2>
                         <h1>ENJOY YOUR IDEAL JOURNEY</h1>
-                        <Button as={Link} to="/about" className="btn color11">Our Company</Button>{' '}
-                        <Button as={Link} to="/contact" className="btn color22">Contact Us</Button>{' '}
+                        <Button as={Link} to="/contact" className="btn color11">Contact Us</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -43,8 +41,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h2>Travel The Worlds</h2>
                         <h1>ENJOY YOUR IDEAL JOURNEY</h1>
-                        <Button as={Link} to="/about" className="btn color11">Our Company</Button>{' '}
-                        <Button as={Link} to="/contact" className="btn color22">Contact Us</Button>{' '}
+                        <Button as={Link} to="/contact" className="btn color11">Contact Us</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -56,8 +53,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h2>Travel The Worlds</h2>
                         <h1>ENJOY YOUR IDEAL JOURNEY</h1>
-                        <Button as={Link} to="/about" className="btn color11">Our Company</Button>{' '}
-                        <Button as={Link} to="/contact" className="btn color22">Contact Us</Button>{' '}
+                        <Button as={Link} to="/contact" className="btn color11">Contact Us</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -69,8 +65,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h2>Travel The Worlds</h2>
                         <h1>ENJOY YOUR IDEAL JOURNEY</h1>
-                        <Button as={Link} to="/about" className="btn color11">Our Company</Button>{' '}
-                        <Button as={Link} to="/contact" className="btn color22">Contact Us</Button>{' '}
+                        <Button as={Link} to="/contact" className="btn color11">Contact Us</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

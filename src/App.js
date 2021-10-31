@@ -18,6 +18,7 @@ import Cart from './Pages/Cart/Cart';
 import SingleUser from './Pages/SingleUser.js/SingleUser';
 import Locations from './Pages/Locations/Locations';
 import Places from './Pages/Places/Places'
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -55,6 +56,9 @@ function App() {
             </Route>
             <Route path="/singleUser/:id">
               <SingleUser></SingleUser>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

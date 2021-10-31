@@ -6,7 +6,7 @@ const SingleUser = () => {
     const { id } = useParams();
     const [user, setUser] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${id}`)
+        fetch(`https://shielded-anchorage-74382.herokuapp.com/user/${id}`)
             .then(res => res.json())
             .then(result => setUser(result))
     }, [id]);
@@ -40,7 +40,7 @@ const SingleUser = () => {
     }
 
     const handleUpdateUser = e => {
-        fetch(`http://localhost:5000/user/${id}`, {
+        fetch(`https://shielded-anchorage-74382.herokuapp.com/user/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)

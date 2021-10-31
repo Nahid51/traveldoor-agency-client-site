@@ -7,7 +7,7 @@ const AllUsers = () => {
     const [count, setCount] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://shielded-anchorage-74382.herokuapp.com/users')
             .then(res => res.json())
             .then(result => setUsers(result))
     }, [count]);
@@ -15,7 +15,7 @@ const AllUsers = () => {
     const handleDelete = id => {
         const procced = window.confirm('Are you sure to delete this user?')
         if (procced) {
-            fetch(`http://localhost:5000/user/${id}`, {
+            fetch(`https://shielded-anchorage-74382.herokuapp.com/user/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' },
             })
@@ -28,7 +28,7 @@ const AllUsers = () => {
         <div>
             <h2>All Booking User list</h2>
             <div>
-                <Row xs={3} md={6} className="g-4">
+                <Row xs={2} md={5} className="g-4">
                     {users.map(user => <div key={user?._id}>
                         <Col>
                             <Card>
